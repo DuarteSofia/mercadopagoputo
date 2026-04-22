@@ -1,5 +1,5 @@
 // --- 1. CONFIGURACIÓN ---
-const API_URL = "https://script.google.com/macros/s/AKfycbzuw33LrXs7Zn7uXQt-ufHrcTIufBGwPphrQEpBoYFCoOngjI8zLaxP0TXLqDecChXolw/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbw5vbbG34zVQitFTKuE4gCLEuIgg7XAJCpoaoSNIZSMIjUNE1w7TUUAwJuyJAOgkK_j0A/exec";
 
 let cropperInstancia = null;
 let idFotoActual = '';
@@ -280,10 +280,12 @@ btnComprar.addEventListener('click', async () => {
         
         if(resultado.status === "exito") {
             ocultarLoader();
-            mp.checkout({
-                preference: { id: resultado.id_preferencia },
-                autoOpen: true 
-            });
+            
+            // ==============================================================
+            // NUEVA REDIRECCIÓN: Viaja en la misma pestaña directamente
+            // ==============================================================
+            window.location.href = "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=" + resultado.id_preferencia;
+            
         } else {
             throw new Error(resultado.mensaje);
         }
