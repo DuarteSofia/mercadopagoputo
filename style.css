@@ -1,0 +1,51 @@
+/* =========================================
+   ESTILOS BASE Y FONDOS
+========================================= */
+body {
+    background-color: #f3f4f6;
+    background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* =========================================
+   EFECTOS PREMIUM (GLASSMORPHISM)
+========================================= */
+.glass-panel { 
+    background: rgba(255, 255, 255, 0.9); 
+    backdrop-filter: blur(10px); 
+}
+
+.editable-hover:hover { 
+    outline: 2px dashed #3b82f6; 
+    background-color: rgba(59, 130, 246, 0.1); 
+    cursor: text; 
+    border-radius: 4px; 
+}
+
+.foto-editable:hover { 
+    outline: 3px dashed #3b82f6; 
+    opacity: 0.8; 
+}
+
+/* =========================================
+   ANIMACIONES Y LOADER
+========================================= */
+.loader { 
+    border-top-color: #3b82f6; 
+    -webkit-animation: spinner 1.5s linear infinite; 
+    animation: spinner 1.5s linear infinite; 
+}
+
+@keyframes spinner { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
+
+/* =========================================
+   NAVEGACIÓN DE PANTALLAS (SPA)
+========================================= */
+.pantalla { transition: opacity 0.4s ease-in-out; }
+.oculto { display: none !important; opacity: 0; }
+.visible { display: flex; opacity: 1; }
