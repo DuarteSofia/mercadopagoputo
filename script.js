@@ -280,12 +280,10 @@ btnComprar.addEventListener('click', async () => {
         
         if(resultado.status === "exito") {
             ocultarLoader();
-            
-            // ==============================================================
-            // NUEVA REDIRECCIÓN: Viaja en la misma pestaña directamente
-            // ==============================================================
-            window.location.href = "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=" + resultado.id_preferencia;
-            
+            mp.checkout({
+                preference: { id: resultado.id_preferencia },
+                autoOpen: true 
+            });
         } else {
             throw new Error(resultado.mensaje);
         }
