@@ -1,5 +1,5 @@
 // --- 1. CONFIGURACIÓN ---
-const API_URL = "https://script.google.com/macros/s/AKfycbw5vbbG34zVQitFTKuE4gCLEuIgg7XAJCpoaoSNIZSMIjUNE1w7TUUAwJuyJAOgkK_j0A/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbzuw33LrXs7Zn7uXQt-ufHrcTIufBGwPphrQEpBoYFCoOngjI8zLaxP0TXLqDecChXolw/exec";
 
 let cropperInstancia = null;
 let idFotoActual = '';
